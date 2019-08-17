@@ -1,0 +1,59 @@
+<!-- <div class="card">
+	<div class="card-wrapper">
+		<div class="card-front card-legendary">
+			<div class="card-header">
+				<div class="card-name">Dark Dragon</div>						
+				<div class="card-level">8 <i class="fas fa-star" style="color: #e2aa06de;"></i></div>					
+			</div>
+			<div class="card-avatar">
+				<img src="assets/img/background/u37XjCk.jpg" alt="">
+			</div>
+			<div class="card-footer">
+				<div class="card-hp-mp">
+					<i class="fa fa-tint" style="color: red"></i>10000 |
+					<i class="fa fa-tint" style="color: blue"></i>500
+				</div>						
+				<div class="card-atk-def">
+					<img src="assets/img/icon/history-swords-crossed-512.png" width="15" height="15" style="margin-top: -3px">3000 |
+					<i class="fas fa-shield-alt" style="color: black"></i>2500</div>											
+			</div>
+			<div class="card-abilities">
+				<p><b>[Dragon]</b></p>
+				<p>Legendary dark dragon. Can use "dark blame breath" which deal 3000 damage to all enemies. Cost 200 mana. CD 4 turns.</p>
+			</div>
+		</div>
+		<div class="card-back">
+			<h1>Seal</h1>								
+		</div>
+	</div>
+</div> -->
+
+<div class="card">
+	<div class="card-wrapper">
+		<div class="card-front" [ngClass]="setCardRarity()">
+			<div class="card-header">
+				<div class="card-name">{{cardName}}</div>						
+				<div class="card-level">{{cardLevel}} <i class="fas fa-star" style="color: #e2aa06de;"></i></div>					
+			</div>
+			<div class="card-avatar">
+				<img [src]="cardAvatarUrl" alt="">
+			</div>
+			<div class="card-footer">
+				<div class="card-hp-mp">
+					<i class="fa fa-tint" style="color: red"></i>{{cardHP}} |
+					<i class="fa fa-tint" style="color: blue"></i>{{cardMP}}
+				</div>						
+				<div class="card-atk-def">
+					<img src="assets/img/icon/history-swords-crossed-512.png" width="15" height="15" style="margin-top: -3px">{{cardAtk}} |
+					<i class="fas fa-shield-alt" style="color: black"></i>{{cardDef}}</div>											
+			</div>
+			<div class="card-desc">
+				<p><b>{{cardType}}</b></p>
+				<p>{{cardDesc}}</p>
+			</div>
+		</div>
+		<div class="card-back">
+								
+		</div>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<!-- <div class="card-grid">
+	<div class="card-container">
+		<app-card [ngStyle]="setStyle()"></app-card>
+	</div>
+</div> -->
+
+<div class="card-grid">
+	<div class="card-container" *ngFor="let item of cards">
+		<app-card 
+			[ngStyle]="setStyle()"
+			[cardName]="item.cardName"
+			[cardLevel]="item.cardLevel"
+			[cardRarity]="item.cardRarity"
+			[cardAvatarUrl]="item.cardAvatarUrl"
+			[cardHP]="item.cardHP"
+			[cardMP]="item.cardMP"
+			[cardAtk]="item.cardAtk"
+			[cardDef]="item.cardDef"
+			[cardType]="item.cardType"
+			[cardDesc]="item.cardDesc"
+		></app-card>
+	</div>
+</div>

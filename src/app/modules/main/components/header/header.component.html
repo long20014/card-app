@@ -1,0 +1,46 @@
+<section id="intro">
+	<header id="menu">
+		<ul id="nav">
+			<li class="home">
+				<a routerLink="" routerLinkActive="active"><span>Home</span></a>
+			</li>
+			<li class="gallery">
+				<a routerLink="/gallery" routerLinkActive="active"><span>Gallery</span></a>
+			</li>				
+			<li class="about">
+				<a routerLink="/market" routerLinkActive="active"><span>Market</span></a>
+			</li>
+			<li class="shop">
+				<a routerLink="/shop" routerLinkActive="active"><span>Shop</span></a>
+			</li>
+			<li class="support">
+				<a routerLink="/support" routerLinkActive="active"><span>Support</span></a>
+			</li>
+			<li class="contact">
+				<a routerLink="/about" routerLinkActive="active"><span>About</span></a>
+			</li>
+			<li class="login">
+				<ng-container *ngIf="!isLogin; else elseLogin">
+					<a routerLink="/login" routerLinkActive="active"><span>Login</span></a>
+				</ng-container>
+				<ng-template #elseLogin>
+					<a (click)="openNav()" style="cursor: pointer;"><span>Account</span></a>
+				</ng-template>				
+			</li>
+		</ul>
+		<div id="mySidenav" class="sidenav" 
+			[ngStyle] ="{
+				'width': isOpen? '250px' : '0'
+			}"
+		>
+		  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+		  <a href="#"><p class="text-center"><img src="assets/img/background/angel.jpg" style="border-radius: 100%;width: 100px;height: 100px;"></p></a>
+		  <a class="page-link" routerLink="/admin" routerLinkActive="active">Admin</a>		  
+		  <a class="page-link" routerLink="/account" routerLinkActive="active">Account</a>
+		  <a class="page-link" routerLink="/collection" routerLinkActive="active">Collection</a>
+		  <a class="page-link" routerLink="/colosseum" routerLinkActive="active">Colosseum	</a>
+		  <hr class="style-2">		 
+		  <a class="page-link" (click)="onLogout()" style="cursor: pointer;"><span>Logout</span></a>
+		</div>			
+	</header>
+</section>

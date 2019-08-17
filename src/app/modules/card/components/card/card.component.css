@@ -1,0 +1,169 @@
+.card {
+	position: relative;
+	height: 560px;
+	width: 90%;
+	max-width: 340px;
+	min-width: 280px;
+	perspective: 1000px;
+	transition: transform 200ms ease-in;
+	animation: appear 1000ms ease-in-out;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px); 
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.card-wrapper {
+	position: absolute;	
+	height: 100%;
+	width: 100%;
+	transition: transform 200ms ease-in;
+	transform-style: preserve-3d;	
+}
+
+.card:hover {
+	transform: scale(1.02);
+}
+
+.card:active .card-wrapper {
+	transform: rotateY(180deg);		
+}
+
+.card-front, .card-back {
+	position: absolute;
+	border: 2px solid black;
+	border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {		
+	overflow: hidden;
+}
+
+.card-back {	
+	color: black;
+  transform: rotateY(180deg);
+  z-index: 1;
+  border: 5px solid #e0d6c3;
+  overflow: hidden;
+}
+
+.card-back:before {
+	content: '';
+	position: absolute;
+	top: -145%;
+	left: 25%;
+	height: 300%;
+	width: 300%;
+	background-image: linear-gradient(89.32026270853589deg, 
+		rgba(255, 255, 255,1) 0.7260592057101032%,
+		rgba(254, 254, 249,1) 0.7260592057101032%,
+		rgba(229, 232, 73,1) 15.534921760614933%,
+		rgba(231, 242, 73,1) 31.166498901903363%,
+		rgba(252, 252, 252,1) 49.26621980234261%,
+		rgba(231, 242, 73,1) 69.42272716874085%,
+		rgba(237, 225, 0,1) 83.40887513726209%,
+		rgba(255, 255, 255,1) 99.4518095717423%
+	);
+	transform: rotate(45deg);
+	z-index: -1;
+}
+
+.card-common {
+	background: white;
+}
+
+.card-elite {
+	background: #015d2f;
+}
+
+.card-rare {
+	background: #06528a;
+}
+
+.card-epic {
+	background: #8e0bad;
+}
+
+.card-legendary {
+	background: #fd9b03;
+}
+
+.card-myth {
+	background: #ff0a0a;
+}
+
+.card-divine {
+	background: #ffd534;
+}
+
+.card-unknown {
+	background: #00afa8;
+}
+
+
+.card-header, .card-avatar, .card-footer,
+.card-desc {
+	max-width: 100%;
+	margin: 10px 10px 10px 10px;
+	border: 1px solid black;
+	background: #d8d2d2;
+	color: black;
+}
+
+.card-header, .card-footer {	
+	height: 25px;	
+}
+
+.card-avatar {
+	height: 300px;	
+}
+
+.card-avatar img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.card-desc {
+	text-align: justify;
+	height: 150px;
+	overflow-y: auto;
+}
+
+.card-name, .card-hp-mp {
+	margin-top: 5px;
+	padding-left: 5px;
+	float: left;	
+}
+
+.card-level,.card-atk-def {	
+	margin-top: 5px;	
+	padding-right: 5px;
+	float: right;
+	position: relative;
+}
+
+.card-name {
+	font-weight: bold;
+}
+
+.card-atk-def {
+	
+}
+
+.card-desc p {
+	padding: 0;
+	margin: 5px;
+	text-align: left;
+}
