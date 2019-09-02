@@ -15,7 +15,9 @@ import { Router} from '@angular/router';
 export class HeaderComponent implements OnInit, OnChanges {
 
 	public isLogin = false;
-	public isOpen = false;
+	public rightNavOpen = false;
+  public leftNavOpen = false;
+
   constructor(
   	public router: Router,
   ) { }
@@ -46,16 +48,26 @@ export class HeaderComponent implements OnInit, OnChanges {
   		localStorage.removeItem('user');
   		this.router.navigate(['']);
   		alert('user logged out');
-  		this.isOpen = false;
+  		this.rightNavOpen = false;
   	}
   	else return 0;  	
   }
 
   openNav() {
-  	this.isOpen = true;
+  	this.rightNavOpen = true;
+    this.leftNavOpen = false;
   }
 
   closeNav() {
-  	this.isOpen = false;
+  	this.rightNavOpen = false;
+  }
+
+  openLeftNav() {
+    this.leftNavOpen = true;
+    this.rightNavOpen = false;
+  }
+
+  closeLeftNav() {
+    this.leftNavOpen = false;
   }
 }

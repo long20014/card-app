@@ -13,6 +13,7 @@ export class CardGridComponent implements OnInit, OnDestroy {
 
   public subscription : Subscription;
   public cards : CardList[] = [];
+  //public cards = {};
   public card: CardList = null;
 
   public cardName: string;

@@ -3,7 +3,7 @@
 	height: 560px;
 	width: 90%;
 	max-width: 340px;
-	min-width: 280px;
+	min-width: 290px;
 	perspective: 1000px;
 	transition: transform 200ms ease-in;
 	animation: appear 1000ms ease-in-out;

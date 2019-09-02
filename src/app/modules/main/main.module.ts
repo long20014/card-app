@@ -7,6 +7,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { MainRoutes } from './main.routes';
 
 import { HomeComponent } from './components/home/home.component';
+import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -14,6 +15,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 @NgModule({
 	declarations: [
     HomeComponent,
+    MainComponent,
     LoginComponent,
     HeaderComponent,
     SignUpComponent

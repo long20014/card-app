@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy-config.json",
     "build": "ng build",
+	"deploy": "ng build --prod --output-path docs --base-href https://long20014.github.io/card-app/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.web-wrapper:after {
+	content: "";
+	position: fixed;
+	top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+	background: url('/assets/img/background/73cf9f3be63e72ec74faf197a2c31cc6.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	z-index: -1;	
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;	
+}
+
+app-main, app-header {
+	z-index: 1;
+}
